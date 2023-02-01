@@ -1,0 +1,121 @@
+@import url("./tufte.css");
+
+:root {
+  --ls-font-family: et-book,
+                    "Iowan Old Style",
+                    "Apple Garamond",
+                    Baskerville,
+                    "Times New Roman",
+                    "Droid Serif",
+                    Times,
+                    "Source Serif Pro",
+                    serif,
+                    "Apple Color Emoji",
+                    "Segoe UI Emoji",
+                    "Segoe UI Symbol";
+
+  --sans: -apple-system,
+             BlinkMacSystemFont,
+             "avenir next",
+             avenir,
+             "segoe ui",
+             "helvetica neue",
+             helvetica,
+             Cantarell,
+             Ubuntu,
+             roboto,
+             noto,
+             arial,
+             sans-serif;
+
+  --ct-page-title-font-family: var(--ls-font-family);
+  --ct-code-font-family: "Cartograph CF",
+                         "MonoLisa",
+                         "Fira Code",
+                         Menlo,
+                         Consolas,
+                         Monaco,
+                         "Liberation Mono",
+                         "Lucida Console",
+                         monospace;
+  font-size: 18px;
+
+}
+
+.light-theme, .white-theme, html[data-theme=light] {
+  --ls-primary-background-color: #fffff8;
+  --ls-secondary-background-color: #fffaf0;
+  --ls-primary-text-color: #111;
+  --ls-header-button-background: #111;
+  --ls-link-ref-text-color: #111;
+  --ls-link-text-color: #111;
+  --ls-link-text-hover-color: #111;
+  --ls-highlight-color-yellow: var(--ls-secondary-background-color);
+  --ls-page-blockquote-bg-color: var(--ls-secondary-background-color);
+  --ls-page-blockquote-border-color: #DC2626;
+}
+
+code {
+  font-family: var(--ct-code-font-family) !important;
+}
+
+pre {
+  font-family: var(--ct-code-font-family) !important;
+}
+
+/* page link [[brackets]] */
+span.text-gray-500.bracket {
+  color: var(--ls-page-blockquote-border-color);
+  opacity: 1;
+}
+
+/* page link #hashtags */
+a.tag {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+/* remove highlight from h1 */
+h1.px-1.with-bg-color {
+  background-color: var(--ls-primary-background-color) !important;
+}
+
+h1.page-title {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+/* journal, graph, & all pages links */
+nav a.item {
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+}
+
+/* page links in sidebar */
+span.page-title {
+  font-size: 1rem;
+}
+
+/* sidebar categories */
+span.flex-1.ml-2 {
+  font-size: 1.1rem !important;
+  font-variant: small-caps;
+  letter-spacing: 0.05rem;
+}
+
+/* plugin management modal */
+div.desc.text-xs > p {
+  font-size: 0.5rem;
+}
+
+/* removes horizontal rule from h1 and h2 */
+.editor-inner.uniline-block:is(.h1,.h2), .ls-block :is(h1,h2) {
+  border-bottom: 0;
+}
+
+/* prevents cutting descenders on page titles */
+.ls-block {
+  padding: 0.3rem 0;
+}
